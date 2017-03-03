@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+            var version = parseFloat(RegExp.$1);
+            if (version > 2.3) {
+                var phoneScale = parseInt(window.screen.width) / 640;
+                document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+            } else {
+                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+
+    </script>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>
+        *{
+          margin: 0;
+          padding: 0;
+        }
+        #imgWrap,#canvas{
+            width: 600px;
+            height: 400px;
+            border: 1px solid #cccccc;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        #imgWrap img{
+            position: absolute;
+            width: 100%;
+            max-width: none;
+            left: 0;
+            top: 0;
+        }
+        #canvas{
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+<input type="file" id="file1" class="preViewFile">
+<button id="submit">提交</button>
+<div id="imgWrap" class="pinch compressWrap">
+</div>
+
+<!-- <canvas width="600" height="400" id="canvas">
+
+</canvas> -->
+
+<img id="new" alt="">
+</body>
+<script src="lib/jquery.js"></script>
+<script src="lib/hammer.min.js"></script>
+<script src="lib/preView.js"></script>
+<script>
+  var p = new PreViewImg()
+  $('#submit').on('click', function () {
+    var base64 = p.compressBase64()
+    $('#new').attr('src', base64)
+  })
+</script>
+</html>
