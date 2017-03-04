@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/**
+ * @fileoverview  公用样式,包括： 进度条、按钮、提示信息、表单等
+ * @author liuweichao
+ * @version v1
+ * @build 2016-10-11
+ */
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+body {
+  width: 640px;
+  min-height: 1008px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.clearfix {
+  zoom: 1; }
+
+.clearfix:after {
+  display: block;
+  content: '';
+  clear: both;
+  overflow: hidden;
+  height: 0; }
+
+ul,
+ol,
+li {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+img {
+  border: none;
+  outline: none;
+  vertical-align: top;
+  max-width: 100%; }
+
+input {
+  opacity: 1;
+  outline: none;
+  background: none;
+  text-align: center; }
+
+button {
+  border: none; }
+
+.poa {
+  position: absolute; }
+
+.bg {
+  width: 100%; }
+
+.mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  z-index: 999; }
+
+.mask img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: fixed; }

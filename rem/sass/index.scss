@@ -1,0 +1,724 @@
+@charset "UTF-8";
+@import "mixins";
+@import "tip";
+
+@keyframes flash2 {
+  0%, 100%, 50% {
+    opacity: 0
+  }
+  25%, 75% {
+    opacity: 1
+  }
+}
+.flash2 {
+  animation-name: flash2;
+}
+
+.music {
+  position: fixed;
+  z-index: 5;
+  top: px2rem(26px);
+  right: px2rem(26px);
+  width: px2rem(50px);
+  height: px2rem(50px);
+  background: url("../img/music.png") 0 0 no-repeat;
+  background-size: contain;
+}
+.music.nomusic {
+  background-image: url("../img/nomuisc.png");
+  background-size: contain;
+}
+
+.bg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+input[type='file']{
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mask{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .8);
+  display: none;
+  img{
+    width: px2rem(555px);
+    height: px2rem(780px);
+    position: absolute;
+    top: px2rem(30px);
+    right: px2rem(60px);
+  }
+}
+
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.swiper-container>.swiper-wrapper>.swiper-slide{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: px2rem(18px);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.arrow{
+  width: px2rem(55px);
+  position: absolute;
+  left: px2rem(290px);
+  bottom: px2rem(20px);
+}
+
+.page1{
+  .logo{
+    width: px2rem(184px);
+    height: px2rem(27px);
+    position: absolute;
+    left: px2rem(37px);
+    top: px2rem(55px);
+  }
+  .phoenix{
+    width: px2rem(640px);
+    height: px2rem(466px);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .fire{
+    width: px2rem(640px);
+    height: px2rem(443px);
+    position: absolute;
+    left: 0;
+    top: px2rem(610px);
+
+  }
+
+  .fire1_1{
+    width: px2rem(359px);
+    height: px2rem(309px);
+    position: absolute;
+    left: px2rem(-154px);
+    top: px2rem(690px);
+
+  }
+
+  .fire1_2{
+    width: px2rem(192px);
+    height: px2rem(165px);
+    position: absolute;
+    left: px2rem(178px);
+    top: px2rem(725px);
+
+  }
+
+  .fire1_3{
+    width: px2rem(146px);
+    height: px2rem(126px);
+    position: absolute;
+    left: px2rem(216px);
+    top: px2rem(852px);
+
+  }
+
+  .fire1_4{
+    width: px2rem(252px);
+    height: px2rem(240px);
+    position: absolute;
+    left: px2rem(390px);
+    top: px2rem(784px);
+
+  }
+
+  .fire1_5{
+    width: px2rem(228px);
+    height: px2rem(195px);
+    position: absolute;
+    left: px2rem(530px);
+    top: px2rem(624px);
+
+  }
+
+
+  .font1{
+    width: px2rem(130px);
+    height: px2rem(113px);
+    position: absolute;
+    left: px2rem(178px);
+    top: px2rem(392px);
+  }
+  .font2{
+    width: px2rem(153px);
+    height: px2rem(110px);
+    position: absolute;
+    left: px2rem(166px);
+    top: px2rem(511px);
+  }
+
+  .font3{
+    width: px2rem(111px);
+    height: px2rem(115px);
+    position: absolute;
+    left: px2rem(184px);
+    top: px2rem(622px);
+  }
+  .font4{
+    width: px2rem(81px);
+    height: px2rem(115px);
+    position: absolute;
+    left: px2rem(192px);
+    top: px2rem(741px);
+  }
+
+  .font5{
+    width: px2rem(90px);
+    height: px2rem(101px);
+    position: absolute;
+    left: px2rem(344px);
+    top: px2rem(513px);
+  }
+  .font6{
+    width: px2rem(104px);
+    height: px2rem(112px);
+    position: absolute;
+    left: px2rem(332px);
+    top: px2rem(620px);
+  }
+  .font7{
+    width: px2rem(127px);
+    height: px2rem(95px);
+    position: absolute;
+    left: px2rem(312px);
+    top: px2rem(744px);
+  }
+  .font8{
+    width: px2rem(126px);
+    height: px2rem(119px);
+    position: absolute;
+    left: px2rem(313px);
+    top: px2rem(844px);
+  }
+}
+
+.page1_2{
+  .logo{
+    width: px2rem(184px);
+    height: px2rem(27px);
+    position: absolute;
+    left: px2rem(37px);
+    top: px2rem(55px);
+  }
+  .phoenix{
+    width: px2rem(518px);
+    position: absolute;
+    left: px2rem(126px);
+    top: px2rem(-70px);
+  }
+  .fire{
+    width: px2rem(640px);
+    height: px2rem(443px);
+    position: absolute;
+    left: 0;
+    top: px2rem(610px);
+
+  }
+
+  .fire1_1{
+    width: px2rem(359px);
+    height: px2rem(309px);
+    position: absolute;
+    left: px2rem(-154px);
+    top: px2rem(690px);
+
+  }
+
+  .fire1_2{
+    width: px2rem(192px);
+    height: px2rem(165px);
+    position: absolute;
+    left: px2rem(178px);
+    top: px2rem(725px);
+
+  }
+
+  .fire1_3{
+    width: px2rem(146px);
+    height: px2rem(126px);
+    position: absolute;
+    left: px2rem(216px);
+    top: px2rem(852px);
+
+  }
+
+  .fire1_4{
+    width: px2rem(252px);
+    height: px2rem(240px);
+    position: absolute;
+    left: px2rem(390px);
+    top: px2rem(784px);
+
+  }
+
+  .fire1_5{
+    width: px2rem(228px);
+    height: px2rem(195px);
+    position: absolute;
+    left: px2rem(530px);
+    top: px2rem(624px);
+
+  }
+
+  .font1{
+    width: px2rem(100px);
+    position: absolute;
+    left: px2rem(53px);
+    top: px2rem(222px);
+  }
+  .font2{
+    width: px2rem(118px);
+    position: absolute;
+    left: px2rem(153px);
+    top: px2rem(222px);
+  }
+
+  .font3{
+    width: px2rem(85px);
+    position: absolute;
+    left: px2rem(273px);
+    top: px2rem(222px);
+  }
+  .font4{
+    width: px2rem(62px);
+    position: absolute;
+    left: px2rem(359px);
+    top: px2rem(222px);
+  }
+
+  .font5{
+    width: px2rem(68px);
+    position: absolute;
+    left: px2rem(242px);
+    top: px2rem(328px);
+  }
+  .font6{
+    width: px2rem(80px);
+    position: absolute;
+    left: px2rem(315px);
+    top: px2rem(328px);
+  }
+  .font7{
+    width: px2rem(98px);
+    position: absolute;
+    left: px2rem(390px);
+    top: px2rem(328px);
+  }
+  .font8{
+    width: px2rem(98px);
+    position: absolute;
+    left: px2rem(484px);
+    top: px2rem(328px);
+  }
+  .picture{
+    width: px2rem(513px);
+    height: px2rem(572px);
+    background: url(../img/page1_2_pictrue.jpg) no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: px2rem(60px);
+    top: px2rem(427px);
+    img{
+      width: px2rem(480px);
+      height: px2rem(480px);
+      position: absolute;
+      left: px2rem(17px);
+      top: px2rem(17px);
+    }
+  }
+}
+
+.page2{
+  .fire{
+    width: px2rem(640px);
+    height: px2rem(192px);
+    position: absolute;
+    left: px2rem(0px);
+    top: px2rem(0px);
+  }
+  .font{
+    width: px2rem(310px);
+    height: px2rem(431px);
+    position: absolute;
+    left: px2rem(180px);
+    top: px2rem(110px);
+  }
+  .firecracker{
+    width: px2rem(40px);
+    height: px2rem(113px);
+    position: absolute;
+    left: px2rem(0px);
+    top: px2rem(25px);
+  }
+  .fontInner{
+    width: px2rem(186px);
+    height: px2rem(431px);
+    position: absolute;
+    left: px2rem(0px);
+    top: px2rem(0px);
+  }
+  .cloud{
+    width: px2rem(190px);
+    height: px2rem(50px);
+    position: absolute;
+    left: px2rem(120px);
+    top: px2rem(355px);
+  }
+
+  .wall{
+    width: px2rem(513px);
+    height: px2rem(409px);
+    position: absolute;
+    left: px2rem(65px);
+    top: px2rem(560px);
+  }
+  .playBtn{
+    width: px2rem(129px);
+    height: px2rem(129px);
+    position: absolute;
+    left: px2rem(190px);
+    top: px2rem(145px);
+  }
+  video{
+    display: none;
+    width: px2rem(513px);
+    height: px2rem(409px);
+    position: absolute;
+    left: px2rem(65px);
+    top: px2rem(560px);
+    background: black;
+  }
+
+}
+
+.page3{
+  .title{
+    width: px2rem(542px);
+    height: px2rem(272px);
+    position: absolute;
+    left: px2rem(50px);
+    top: px2rem(140px);
+  }
+  .titleInner{
+    width: 100%;
+  }
+   .cloud{
+     width: px2rem(581px);
+     height: px2rem(136px);
+     position: absolute;
+     left: px2rem(20px);
+     top: px2rem(-10px);
+   }
+   .person{
+     width: px2rem(378px);
+     height: px2rem(517px);
+     position: absolute;
+     left: px2rem(178px);
+     top: px2rem(345px);
+   }
+  .personInner{
+    width: 100%;
+  }
+  .food{
+    width: px2rem(280px);
+    height: px2rem(163px);
+    position: absolute;
+    left: px2rem(81px);
+    top: px2rem(25px);
+  }
+  .btn{
+    width: px2rem(181px);
+    height: px2rem(68px);
+    @include blockCenter();
+    top: px2rem(860px);
+  }
+  .btnBottom{
+    width: px2rem(389px);
+  height: px2rem(54px);
+  @include blockCenter();
+  top: px2rem(940px);
+}
+  .photo{
+    width: px2rem(571px);
+    height: px2rem(414px);
+    position: absolute;
+    left: px2rem(32px);
+    top: px2rem(410px);
+  }
+  .photoBg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .font{
+    width: px2rem(557px);
+    height: px2rem(405px);
+    position: absolute;
+    left: px2rem(52px);
+    top: px2rem(400px);
+  }
+}
+
+.innerPage{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+.innerPage1{
+  display: block;
+}
+
+.innerPage2{
+   .wrap{
+
+   }
+}
+
+.innerPage2_title{
+  width: px2rem(442px);
+  height: px2rem(40px);
+  position: absolute;
+  left: px2rem(112px);
+  top: px2rem(35px);
+}
+.innerPage2_title2{
+  width: px2rem(251px);
+  height: px2rem(38px);
+  position: absolute;
+  left: px2rem(172px);
+  top: px2rem(37px);
+}
+
+#wrap{
+  width: 100%;
+  height: px2rem(619px);
+  background: #c9c9c9;
+  position: absolute;
+  left:0;
+  top: px2rem(124-20px);
+  overflow: hidden;
+  .logo2{
+    width: px2rem(149px);
+    height: px2rem(21px);
+    position: absolute;
+    left: px2rem(40px);
+    top: px2rem(40px);
+  }
+  .iconChange{
+    width: px2rem(185px);
+    height: px2rem(182px);
+    padding: px2rem(36px);
+    position: absolute;
+    left: px2rem(430px);
+    top: px2rem(20px);
+    background: url("../img/iconBg.png") 0 0 no-repeat;
+    background-size: cover;
+    img{
+      width: 80%;
+      @include centerMiddle();
+    }
+    .remove{
+      width: px2rem(38px);
+      height: px2rem(38px);
+      position: absolute;
+      left: 0;
+      top: px2rem(150px);
+    }
+  }
+
+  .fileImg{
+    width: 100%;
+  }
+  .addImgBtn{
+    width: px2rem(276px);
+    height: px2rem(222px);
+    @include blockCenter();
+    top: px2rem(240px);
+    background: url("../img/addImgBtn.png") no-repeat;
+    background-size: cover;
+  }
+  input[type=file] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.iconWrap{
+  width: 100%;
+  padding: 0 px2rem(80px) ;
+  position: absolute;
+  left: 0;
+  top: px2rem(780-20px);
+  &>div{
+    width: px2rem(111px);
+    height: px2rem(111px);
+    float: left;
+    background: #dcdcdc;
+    position: relative;
+    overflow: hidden;
+    border-radius: px2rem(15px);
+    &:nth-child(2){
+      margin: 0 px2rem(73px);
+    }
+    img{
+      width: 80%;
+      @include centerMiddle();
+    }
+  }
+}
+
+.btnWrap{
+  width: 100%;
+  height: px2rem(68px);
+  position: absolute;
+  left: 0;
+  top: px2rem(910 - 20px);
+  &>div{
+    position: relative;
+    float: left;
+    width: px2rem(181px);
+    height: px2rem(68px);
+    margin:0 px2rem(47px) 0 px2rem(92px) ;
+  }
+}
+.createImg{
+  background: url("../img/createImg.png") no-repeat;
+  background-size: cover;
+}
+.resetImg{
+  background: url("../img/resetImg.png") no-repeat;
+  background-size: cover;
+}
+
+.shareBtn{
+  background: url("../img/shareBtn.png") no-repeat;
+  background-size: cover;
+}
+.again{
+  background: url("../img/again.png") no-repeat;
+  background-size: cover;
+}
+
+.innerPage3{
+  background: #511a82;
+  .bg{
+    width: 100%;
+    height: auto;
+  }
+  .showImg{
+    width: px2rem(537px);
+    height: px2rem(537px);
+    @include blockCenter();
+    top: px2rem(75px);
+    background: url("../img/pictrueBg.jpg") no-repeat;
+    background-size: cover;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .font{
+    width: px2rem(203px);
+    height: px2rem(32px);
+    @include blockCenter();
+    top: px2rem(475px);
+    background: url("../img/saveFont.png") no-repeat;
+    background-size: cover;
+  }
+  .small{
+    width: px2rem(545px);
+    height: px2rem(144px);
+    @include blockCenter();
+    top: px2rem(730px);
+    //background: url("../img/showBig.png") no-repeat;
+    background-size: cover;
+    div{
+      float: left;
+      width: 25%;
+      height: 100%;
+      position: relative;
+      img{
+        width: 100%;
+        @include blockMiddle();
+      }
+    }
+  }
+
+  .showBigWrap{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    .remove{
+      width: px2rem(85px);
+      height: px2rem(85px);
+      position: absolute;
+      left: px2rem(170px);
+      top: px2rem(98px);
+    }
+
+  }
+  .showBig0{
+    background: url("../img/showBig0.jpg") no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .showBig1{
+    background: url("../img/showBig1.jpg") no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .showBig2{
+    background: url("../img/showBig2.jpg") no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .showBig3{
+    background: url("../img/showBig3.jpg") no-repeat;
+    background-size: 100% 100%;
+  }
+
+}
+
+.share{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}

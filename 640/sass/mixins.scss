@@ -1,0 +1,56 @@
+// Mixins
+// --------------------------------------------------
+@import "variables";
+@mixin centerMiddle($x:50%,$y:50%){
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-$x,-$y);
+}
+@mixin blockCenter($t:0,$x:50%){
+  position: absolute;
+  left: 50%;
+  top: $t;
+  transform: translate(-$x,0);
+}
+@mixin blockMiddle($l:0,$y:50%){
+  position: absolute;
+  left: $l;
+  top: 50%;
+  transform: translate(0,-$y);
+}
+@mixin ftl($align, $height){
+  text-align: $align;
+  line-height: $height;
+}
+@mixin dot($width:100%){
+  max-width: 100%;
+  width: $width;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+@mixin triangle($direction,$width:10px,$color:red){
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-width: $width;
+  @if $direction == top {
+    border-color: transparent transparent $color transparent;
+    border-style:dashed dashed solid dashed;
+  } @else if $direction == bottom {
+    border-color:$color transparent transparent transparent;
+    border-style:solid dashed dashed dashed;
+  } @else if $direction == right {
+    border-color: transparent transparent transparent $color;
+    border-style:dashed dashed dashed solid;
+  } @else if $direction == left {
+    border-color: transparent $color transparent transparent;
+    border-style:dashed solid dashed dashed;
+  }
+}
+
+@mixin toLine{
+  word-wrap: break-word;
+  word-break: normal;
+}

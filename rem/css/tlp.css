@@ -1,0 +1,9 @@
+#testDiv {
+  width: 1.33333rem;
+  height: 1.33333rem;
+  max-width: 100%;
+  width: 1.33333rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: yellow; }

@@ -1,0 +1,18 @@
+@mixin centerMiddle($x:50%,$y:50%){
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-$x,-$y);
+}
+@mixin blockCenter($x:50%,$t:0){
+  position: absolute;
+  left: 50%;
+  top: $t;
+  transform: translate(-$x,0);
+}
+@mixin blockMiddle($l:0,$y:50%){
+  position: absolute;
+  left: $l;
+  top: 50%;
+  transform: translate(0,-$y);
+}

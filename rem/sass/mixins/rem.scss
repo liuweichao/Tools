@@ -1,0 +1,72 @@
+@mixin font-dpr($font-size) {
+  font-size: round($font-size * 1 / 2);
+  [data-dpr="2"] & {
+    font-size: round($font-size * 2 / 2);
+  }
+  [data-dpr="2.5"] & {
+    font-size: round($font-size * 2.5 / 2 );
+  }
+  [data-dpr="2.75"] & {
+    font-size: round($font-size * 2.75 / 2);
+  }
+  [data-dpr="3"] & {
+    font-size: round($font-size * 3 / 2);
+  }
+  [data-dpr="4"] & {
+    font-size: round($font-size * 4 / 2);
+  }
+}
+
+$rem-baseline: 75px !default;
+@function rem-separator($list) {
+  @if function-exists("list-separator")==true {
+    @return list-separator($list);
+  }
+  $test-list: ();
+  @each $item in $list {
+    $test-list: append($test-list, $item, space);
+  }
+  @return if($test-list==$list, space, comma);
+}
+
+@mixin rem-baseline($zoom: 100%) {
+  font-size: $zoom / 16px * $rem-baseline;
+}
+
+@function rem-convert($to, $values...) {
+  $result: ();
+  $separator: rem-separator($values);
+  @each $value in $values {
+    @if type-of($value)=="number" and unit($value)=="rem" and $to=="px" {
+      $result: append($result, $value / 1rem * $rem-baseline, $separator);
+    }
+    @else if type-of($value)=="number" and unit($value)=="px" and $to=="rem" {
+      $result: append($result, $value / ($rem-baseline / 1rem), $separator);
+    }
+    @else if type-of($value)=="list" {
+      $result: append($result, rem-convert($to, $value...), $separator);
+    }
+    @else {
+      $result: append($result, $value, $separator);
+    }
+  }
+  @return if(length($result)==1, nth($result, 1), $result);
+}
+
+@function px2rem($values...) {
+  @return rem-convert(rem, $values...);
+
+}
+
+@mixin px2rem($properties, $values...) {
+  @if type-of($properties)=="map" {
+    @each $property in map-keys($properties) {
+      @include px2rem($property, map-get($properties, $property));
+    }
+  }
+  @else {
+    @each $property in $properties {
+      #{$property}: rem-convert(rem, $values...);
+    }
+  }
+}

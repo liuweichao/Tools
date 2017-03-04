@@ -1,0 +1,9 @@
+@import "mixins";
+
+#testDiv{
+  @include blockCenter();
+  @include ftl(center, 20px);
+  @include ftl(center, 20px);
+  @include dot();
+  @include triangle(top, 20px);
+}

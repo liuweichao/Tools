@@ -1,0 +1,11 @@
+@mixin dot($width:100%) {
+  max-width: 100%;
+  width: $width;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+@mixin toLine(){
+  word-wrap: break-word;
+  word-break: normal;
+}

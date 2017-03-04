@@ -1,0 +1,22 @@
+#testDiv {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  text-align: center;
+  line-height: 20px;
+  text-align: center;
+  line-height: 20px;
+  max-width: 100%;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-width: 20px;
+  border-color: transparent transparent red transparent;
+  border-style: dashed dashed solid dashed; }
