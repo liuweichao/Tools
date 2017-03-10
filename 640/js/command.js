@@ -1,4 +1,16 @@
-/* 跳转 */
+var $page = $('.page'),
+    $mask = $('.mask'),
+    $removeMask = $('.removeMask'),
+    pageFn = {}
+
+/* 跳转页面 */
+function toPage (page, param) {
+    $page.hide()
+    $('.' + page).show()
+    pageFn[page] && pageFn[page](param)
+}
+
+/* 网址跳转 */
 $('[data-href]').on('click', function () {
     var href = $(this).attr('data-href')
     window.location.href = href
