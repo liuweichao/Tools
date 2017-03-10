@@ -31,3 +31,7 @@ loading({
   console.log('加载完成')
 })
 ```
+
+``` javascript
+node modulesArray.js img
+```
